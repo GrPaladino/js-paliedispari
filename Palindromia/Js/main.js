@@ -1,5 +1,6 @@
 // - Chiedo all'utente una parola con un prompt
 let userWord = prompt("Inserisci una parola");
+console.log(userWord);
 
 //   - Finché la parola é un numero
 while (!isNaN(userWord)) {
@@ -19,10 +20,12 @@ function checkWord() {
 }
 
 let reverseWord = checkWord();
-c;
+console.log(reverseWord);
+
 while (userWord != reverseWord) {
   alert("La parola inserita non é palindroma!! Inserire un`altra parola");
-  prompt("Inserisci una parola");
+  userWord = prompt("Inserisci una parola");
+  reverseWord = checkWord();
 }
 
 if (userWord === reverseWord) {
